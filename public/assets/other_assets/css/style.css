@@ -1,0 +1,32 @@
+/* HEADER */
+.header-img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+/* NAVBAR */
+.nav-item a:hover {
+    color: black !important;
+    background-color: white;
+}
+
+.fixedTop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* ABOUT ME */
+.about p {
+    text-align: justify;
+}
+
+/* LATEST POSTS */
+#latest-posts {
+    text-align: justify;
+}
+
+/* FOOTER */
+#footer .footer-div {
+    text-align: justify;
+}
