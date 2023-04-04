@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
-    // to category index
+    // to category index page
     public function index () {
         $categories = Category::orderBy('id', 'desc')->paginate(10);
 
