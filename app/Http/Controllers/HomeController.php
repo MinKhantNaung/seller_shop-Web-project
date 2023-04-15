@@ -115,4 +115,19 @@ class HomeController extends Controller
 
         return view('home.details', compact('item'));
     }
+
+    // to categories all page
+    public function allCategories () {
+        $categories = Category::all();
+
+        return view('home.allCategories', compact('categories'));
+    }
+
+    // to items all page
+    public function allItems () {
+        $categories = Category::all();
+        $items = Item::orderBy('id', 'desc')->paginate(8);
+
+        return view('home.allItems', compact('categories', 'items'));
+    }
 }

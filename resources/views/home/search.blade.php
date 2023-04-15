@@ -50,7 +50,7 @@
                                 <div class="row">
                                     <div class="col-md-10 offset-md-1">
                                         <h5>What are you looking for ?
-                                            <a href="" class="text-decoration-none float-sm-end fs-6">View More
+                                            <a href="{{ route('home.allCategories') }}" class="text-decoration-none float-sm-end fs-6">View More
                                                 ></a>
                                         </h5>
                                         <div class="row my-sm-5">
@@ -83,7 +83,7 @@
                                 <div class="row">
                                     <div class="col-md-10 offset-md-1 mt-sm-0 mt-3">
                                         <h5>Recent items
-                                            <a href="" class="text-decoration-none float-end fs-6">View More ></a>
+                                            <a href="{{ route('home.allItems') }}" class="text-decoration-none float-end fs-6">View More ></a>
                                         </h5>
                                         <div class="row mt-sm-4">
                                             @if($items->count() < 1) <h1 class="text-center text-warning my-5">No items

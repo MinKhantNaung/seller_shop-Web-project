@@ -63,5 +63,9 @@ Route::middleware([
         })->name('home.clear');
         // for item details
         Route::get('/item/details/{id}', [HomeController::class, 'itemDetails'])->name('item.details');
+        // for categories all page when click view more
+        Route::get('/category/all', [HomeController::class, 'allCategories'])->name('home.allCategories');
+        // for items all page when click view more
+        Route::get('/item/all', [HomeController::class, 'allItems'])->name('home.allItems');
     });
 });

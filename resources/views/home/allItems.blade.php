@@ -9,6 +9,7 @@
             <section id="header">
                 <div class="row">
                     <div class="col-12">
+                        <a href="{{ route('home.index') }}">Home</a>
                         <form action="{{ route('logout') }}" method="POST" class="float-end">
                             @csrf
                             <button type="submit" class="btn btn-sm btn-warning">Logout</button>
@@ -45,45 +46,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 my-4">
-                            <!-- Category Section -->
-                            <section id="category">
-                                <div class="row">
-                                    <div class="col-md-10 offset-md-1">
-                                        <h5>What are you looking for ?
-                                            <a href="{{ route('home.allCategories') }}" class="text-decoration-none float-sm-end fs-6">View More
-                                                ></a>
-                                        </h5>
-                                        <div class="row my-sm-5">
-                                            @foreach($categories->take(6) as $category)
-                                            <div class="col-lg-2 col-sm-3 col-4 mt-2">
-                                                <a href="{{ route('home.category', $category->id) }}">
-                                                    <div class="p-2 position-relative"
-                                                        style="height:120px; background: rgb(220, 231, 231);">
-                                                        <div class="position-absolute top-50 start-50 translate-middle">
-                                                            <div style="width:40px;height:40px">
-                                                                <img src="{{ asset('storage/category_images/' . $category->image) }}"
-                                                                    alt="image"
-                                                                    class="w-100 img-fluid object-fit-cover rounded-circle ms-2"
-                                                                    style="height:100%">
-                                                            </div>
-                                                            <div class="text-muted text-center fs-6 text-capitalize">
-                                                                {{ $category->name }}</div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
 
                             <!-- Items Section -->
                             <seciton id="items">
                                 <div class="row">
                                     <div class="col-md-10 offset-md-1 mt-sm-0 mt-3">
-                                        <h5>Recent items
-                                            <a href="{{ route('home.allItems') }}" class="text-decoration-none float-end fs-6">View More ></a>
+                                        <h5>
+                                            All Items
                                         </h5>
                                         <div class="row mt-sm-4">
                                             @if($items->count() < 1) <h1 class="text-center text-warning my-5">No items
@@ -121,6 +90,9 @@
                                             @endforeach
                                             @endif
                                         </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        {{ $items->links() }}
                                     </div>
                                 </div>
                             </seciton>
