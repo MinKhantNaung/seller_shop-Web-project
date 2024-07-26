@@ -41,7 +41,11 @@ class CategoryController extends Controller
             'status' => $status,
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Category created successfully!');
+        return response()->json([
+            'status' => 'success',
+            'msg' => 'Successfully stored!',
+            // 'redirectUrl' => route('categories.createPage')
+        ]);
     }
 
     // to edit category page
