@@ -28,7 +28,7 @@ This mini project aims to provide a platform for users to discover items for sal
 - Ajax
 - HTML/CSS
 - Bootstrap 5
-- Fontawesome/ Ckeditor 5
+- Fontawesome/ Ckeditor 4
 - jQuery leaflet map location picker
 
 ## Installation
