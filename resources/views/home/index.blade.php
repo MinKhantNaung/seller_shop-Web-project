@@ -11,7 +11,7 @@
                     <div class="col-12">
                         <form action="{{ route('logout') }}" method="POST" class="float-end">
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-warning">Logout</button>
+                            <button type="submit" class="btn btn-sm btn-warning position-fixed end-0">Logout</button>
                         </form>
                         <img src="{{ asset('default_images/back.jpg') }}" alt="image"
                             class="w-100 img-fluid object-fit-cover">
