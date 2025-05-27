@@ -174,13 +174,6 @@
 @section('script')
 <!-- jquery -->
 <script>
-    // CKEDITOR.replace('description');
-    ClassicEditor
-            .create(document.querySelector('#description'))
-            .catch(error => {
-                console.error( error );
-            });
-
     $(document).ready(function () {
         $('.example').leafletLocationPicker({
             alwaysOpen: true,
@@ -188,6 +181,8 @@
             position: 'bottomleft',
             height: 500,
         });
+
+        CKEDITOR.replace( 'description' );
     })
 
 </script>
